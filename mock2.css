@@ -1,0 +1,141 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.header1 {
+    background-color: black;
+    color: white;
+}
+.header2 {
+    height: 50%;
+}
+.header2 .col-5 h2 span{
+    color: rgba(187, 120, 89, 0.704);
+
+}
+
+.header2 .col-7 ul {
+    list-style: none;
+    display: inline-block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.header2 .col-7 ul li {
+   
+    display: inline-block;
+    margin: 1.5em;
+    
+}
+.offer{
+    align-items: center;
+    text-align: center;
+}
+.offer .card{
+    text-align: left;
+}
+.offer .col-4 .card{
+    border: 0px;
+}
+.offer .col-4 a{
+    color: rgb(213, 118, 118);
+    text-align: left;
+}
+
+.spec{
+    background-image: url(./images/quick-tips-for-_1584fcf8b5abf4.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    position: relative;
+
+
+}
+.spec::after{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.39);
+
+}
+
+.spec1{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    color: white;
+
+}
+.spec1 .card{
+    background: none;
+    color: white;
+    border: 0px;
+    text-align: left;
+    
+}
+.spec2{
+    border-bottom: 2px solid rgb(207, 207, 207);
+    width: 80%;
+    margin-left: 10%;
+
+}
+.spec3{
+    
+    width: 80%;
+    margin-left: 10%;
+    
+
+}
+.a{
+    border-left:2px solid rgb(207, 207, 207) ;
+}
+.why{
+     align-items: center;
+     text-align: center;
+
+}
+.why .card{
+    border: 0px;
+
+}
+.why .card {
+    align-items: center;
+
+}
+.plus {
+    background-color: black;
+   
+}
+.plus .col{
+    padding: 0%;
+}
+.plus .why {
+    background-color: black;
+    color: white;
+    width: 80%;
+   
+  
+
+}
+.plus .card h3{
+    color:rgba(187, 120, 89, 0.704) ;
+}
+
+.plus .why .card{
+    background-color: black;
+    color: white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+   
+
+}
+
+
+
+

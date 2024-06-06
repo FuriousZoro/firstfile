@@ -1,0 +1,200 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+.btn {
+    background-color: rgb(229 28 20);
+}
+
+.header .row .col-9 h2 {
+    color: rgb(229 28 20);
+
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    display: block;
+    font-style: bold;
+}
+
+
+.net {
+    background-image: url(./images/netflixbg.jpg);
+    height: 35rem;
+    position: relative;
+    color: white;
+}
+
+
+.net::after {
+    content: ;
+    height: 35rem;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(106, 106, 106, 0.452);
+    position: absolute;
+}
+
+.header {
+    position: relative;
+    z-index: 2;
+}
+
+.a2 {
+    background: none;
+    color: white;
+    position: relative;
+    z-index: 2;
+    border: 0px;
+}
+
+button {
+    background-color: rgb(229 28 20);
+}
+
+
+
+
+.a1 .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.a1 .row input {
+
+    height: 2.3rem;
+    width: 30%;
+    background-color: rgba(62, 62, 62, 0.745);
+    border: 1px solid rgba(62, 62, 62, 0.745);
+}
+
+.a1 .row button {
+    width: 15%;
+    background-color: rgb(229 28 20);
+}
+
+.trending .row .col a img {
+    height: 15rem;
+    border-radius: 5%;
+}
+
+.trending .row .col .card {
+    background: none;
+    
+}
+
+.trending .row .col :hover {
+    height: 16rem;
+    width: 11rem;
+}
+
+
+
+
+
+.next {
+    width: 2rem;
+    height: 10rem;
+    background-color: #3e3e3ebe;
+    margin-top: 2.5rem;
+
+}
+
+.join .row img {
+    height: 6rem;
+    width: 10rem;
+    
+ 
+}
+.join2 .row  {
+    justify-content: flex-end;
+    
+    
+ 
+}
+
+    
+
+.join2 .card {
+
+    border: 1px solid black;
+    color: white;
+
+}
+
+.join2 .card-body {
+    background: linear-gradient(-192deg, #4c51adc2, #542e7e, #3d2525);
+
+}
+
+#accordionPanelsStayOpenExample{
+    width: 70%;
+    
+   
+}
+.accordion-header{
+    color: white;
+    background-color: #353535be ;
+   
+}
+.accordion-body {
+    padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
+    background-color:#4d4d4dbe;
+    color: rgb(218, 216, 216);
+
+}
+.collapsed{
+    background-color: black;
+  
+    color: rgb(213, 211, 211);
+    margin-top: 2%;
+    border: 1px solid rgb(176, 175, 175);
+}
+.collapsed:hover{
+    background-color: rgb(63, 62, 62);
+}
+.accordion{
+   
+}
+
+.c1 .col-9 input {
+    width: 100%;
+    background-color: #3e3e3e75;
+    border-radius: 0px;
+    color: white;
+    height: 50px;
+    border: 01px solid #414141;
+    text-align: center;
+}
+
+.c1 .btn{
+    height: 50px;
+    width: 80%;
+}
+
+
+.c2 .col-4 ul {
+    list-style: none;
+
+
+}
+ .c2 .col-4 ul li a  {
+    color: rgb(216, 214, 214);
+
+}
+.c3{
+    color: rgb(216, 214, 214);
+}
+
+

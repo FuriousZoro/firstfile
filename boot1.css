@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: "Poppins", sans-serif;
+}
+
+h2 span {
+    color: rgb(205, 134, 67);
+    text-emphasis-color: rgb(205, 134, 67);
+}
+
+.a1 {
+    height: 60px;
+    display: flex;
+    border-bottom: 1px solid black;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+}
+
+.a7 {
+    justify-content: center;
+}
+
+
+
+.a2 {
+    background-image: url(./images/adopt-a-child-in-india.jpg);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.a2 {
+    text-align: center;
+}
+
+
+
+.b1 {
+    /* background-color: #a3a0a0; */
+    backdrop-filter: blur(76px);
+}
+
+.a3 {
+    text-align: center;
+    height: 170px;
+    background-color: rgb(202, 198, 198);
+
+}
+
+.b3 img {
+    height: 100%;
+    width: 304px;
+    justify-content: space-around;
+
+}
+
+.b4 {
+    text-align: center;
+}
+
+.a4 {
+    background-color: rgb(202, 198, 198);
+    height: 400px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.a4 col {
+    align-items: center;
+}
+
+.a6 {
+
+
+    justify-content: space-around;
+
+}
+
+.b5 {
+    background-color: white;
+    margin: 2%;
+    overflow: hidden;
+
+}
+
+.b7 col {
+    height: 150px;
+
+}
+
+.b8 {
+    background-color: rgb(202, 198, 198);
+    justify-content: center;
+
+}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .taskbar {
+        width: 50%;
+        height: auto;
+        margin: 10px;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: black;
+        color: white;
+
+    }
+
+    button {
+        width: auto;
+        height: 25px;
+        border-radius: 0px;
+        background-color: orange;
+        color: black;
+        font-size: 20px;
+    }
+
+    .otsakbar {
+
+        display: none;
+    }
+
+    #text {
+        align-self: center;
+        width: 100%;
+    }
+
+    #text li {
+
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        background: #a6876f;
+        color: black;
+        font-size: 19px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding: 5px;
+
+        margin: 10px;
+        align-content: center;
+
+
+    }
+
+    #text li button img {
+
+        height: 20px;
+        width: 20px;
+    }
+
+    .form {
+        border: 2px solid white;
+        background-image: linear-gradient(rgb(89, 180, 194), rgb(254, 254, 253), rgba(200, 161, 83, 0.678));
+        margin-top: 100px;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+
+    }
+
+    .form form label {
+        float: left;
+        font-size: 20px;
+
+
+
+
+    }
+
+    .form form input {
+        float: right;
+
+
+
+
+
+    }
+
+    .form button {
+        margin-top: 10px;
+        background-color: white;
+        color: black;
+        height: 50px;
+        border: 1px solid rgb(73, 209, 240);
+        box-shadow: 2px 5px 2px rgba(203, 168, 98, 0.953);
+
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .container {
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="taskbar mt-5 align-item-center ">
+        <h1>To DO List</h1>
+        <button type="button" onclick="showtask()">+</button>
+
+
+
+        <div class="otaskbar" id="otaskbar">
+
+            <input type="text" placeholder="write task" id="inp">
+            <button type="button" onclick="closetask()"> X</button><br>
+            <button type="button" onclick="addtask()">Add Task</button>
+
+
+
+        </div>
+        <div class="container" id="text">
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="form container">
+        <form method="post">
+            <div class="row">
+                <label>First Name</label>
+                <input id="fname" type="text" name="fname" onkeyup="checkIsAlpha()" placeholder="First Name">
+                <span class="hidden">enter name</span>
+                <br>
+            </div>
+            <div class="row">
+                <label>Password</label>
+                <input id="password" type="password" name="password" placeholder="First Name"><br>
+            </div>
+            <div class="row">
+                <label>Last Name</label>
+                <input id="lname" type="text" name="lname" placeholder="Last Name"><br>
+            </div>
+
+            <div class="row">
+                <label>Email Address</label>
+                <input id="email" type="email" name="email" placeholder="1234@gmail.com"><br>
+            </div>
+
+            <div class="row">
+                <label>Contact</label>
+                <input id="contact" type="text" name="contact" placeholder="xxxxxxxxxx"><br>
+            </div>
+            <div class="row">
+                <button id="formSubmit" type="submit">Sumbit</button>
+                <button type="reset">Clear</button>
+            </div>
+
+
+
+        </form>
+        <div class="details"></div>
+    </div>
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script>
+    function checkIsAlpha() {
+        var x = document.getElementById("fname").value;
+        console.log(x);
+    }
+    function showtask() {
+        document.getElementById('otaskbar').style.display = 'block';
+
+    }
+    function closetask() {
+        document.getElementById("otaskbar").style.display = 'none'
+    }
+    function addtask() {
+        const inputs = document.getElementById('inp');
+        const text = document.getElementById('text');
+        if (inputs.value === "") {
+            alert("Please enter task");
+        } else {
+            const newEl = document.createElement("li");
+            newEl.innerHTML = inputs.value;
+            newEl.id = "newEl";
+            const delButton = document.createElement("button");
+            delButton.type = "button";
+            delButton.onclick = function () { del(newEl); };
+            delButton.innerHTML = "<img src='./images/del icon.png' >";
+            newEl.appendChild(delButton);
+            text.appendChild(newEl);
+            inputs.value = "";
+        }
+    }
+
+    function del(element) {
+        const del = document.getElementById('text').removeChild(element);
+    }
+
+    // regex : regular express to pattern matching
+
+
+
+
+    // anonymous function : withot name
+
+    document.getElementById('formSubmit').addEventListener("click", function (event) {
+        event.preventDefault();
+        let data = JSON.parse(localStorage.getItem('storedata'));
+        const fname = document.getElementById('fname');
+        const lname = document.getElementById('lname');
+        const email = document.getElementById('email');
+        const contact = document.getElementById('contact');
+        if (data == null) {
+            data = [];
+        }
+        data.push(
+            {
+                "fname": fname.value,
+                "lname": lname.value,
+                "email": email.value, 
+                "contact": contact.value
+            }
+        );
+        localStorage.setItem("storedata", JSON.stringify(data));
+
+        if (fname.value === "") {
+            window.alert("Please enter your first name");
+            // fname.focus();
+            // fname.nextElementSibling.classList.remove('hidden');
+            return;
+        } else {
+            var letters = /^[A-Za-z]+$/;
+            if (!fname.value.match(letters)) {
+                alert("Please enter First name alphabet characters only");
+                return;
+            }
+        }
+
+        if (lname.value === "") {
+            window.alert("Please enter your last name");
+            return;
+        } else {
+            var letters = /^[A-Za-z]+$/;
+            if (!lname.value.match(letters)) {
+                alert("Please enter last name alphabet characters only");
+                return;
+            }
+        }
+
+        if (email.value === "") {
+            window.alert("Please enter your email ");
+            return;
+        }
+
+        if (contact.value === "") {
+            window.alert("Please enter your contact ");
+            return;
+        } else {
+            var number = /^[0-9]+$/;
+            if (!contact.value.match(number)) {
+                alert("Please enter contact in digits only");
+                return;
+            }
+        }
+
+        // if all validations pass, submit the form
+        document.getElementById("formsubmit").submit();
+    });
+
+
+    // document.getElementById("details").innerHTML = fname.value + "" + lname.value + "" + email.value + "" + contact.value
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

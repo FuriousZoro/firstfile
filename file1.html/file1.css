@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.d-block {
+    height: 300px;
+}
+.footer{
+    color: white;
+    height: 250px;
+    background-color: black;
+}
